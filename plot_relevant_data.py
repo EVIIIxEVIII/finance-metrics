@@ -39,9 +39,11 @@ def plot_rv():
     plt.figure()
     plt.xlabel("Time")
     plt.ylabel("Realized volatility")
-    plt.plot(data["Date"], data["Realized_volatility"], label="Realized Volatility")
-    plt.plot(data["Date"], data["Realized_volatility_year"], label="Anuallized Realized Volatility")
+    plt.plot(data["Date"], data["Realized_volatility_20d"], label="Realized Volatility")
     plt.legend()
+
+def plot_iv_black_scholes():
+    pass
 
 def plot_log_return():
     plt.figure()
@@ -52,9 +54,9 @@ def plot_log_return():
 
 plot_price()
 plot_variance()
-#plot_log_return()
-#plot_relative_return()
-#plot_rv()
+plot_log_return()
+plot_relative_return()
+plot_rv()
 
 plt.show()
 
