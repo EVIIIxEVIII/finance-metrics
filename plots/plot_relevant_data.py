@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-data = pd.read_csv("clean_ibm.csv")
+data = pd.read_csv("./data/clean_spy.csv")
 
 data['Date'] = pd.to_datetime(data['Date'], format="ISO8601")
 data = data.sort_values(by='Date')
